@@ -13,6 +13,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
+import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
+import static com.sun.javaws.ui.SplashScreen.hide;
+import javafx.scene.input.MouseEvent;
+
 
 
 /**x    
@@ -36,6 +40,20 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        HamburgerBackArrowBasicTransition burgerTask2 = new HamburgerBackArrowBasicTransition(hamburger);
+        burgerTask2.setRate(-1);
+        hamburger.addEventHandler(MouseEvent.MOUSE_PRESSED, (e) -> {
+            burgerTask2.setRate(burgerTask2.getRate()* -1);
+        burgerTask2.play();
+        if(drawer.isClosed()){
+            drawer.open();
+        }
+            else{
+                    drawer.close();
+                    
+                    }
+                   
+    });
     }    
     
 }
