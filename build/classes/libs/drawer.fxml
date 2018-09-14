@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="178.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libs.DrawerController">
    <children>
       <ImageView accessibleRole="BUTTON" fitHeight="111.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
@@ -13,7 +14,7 @@
             <Image url="@../../../../../Desktop/abcd.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="profile" accessibleText="but1" mnemonicParsing="false" prefHeight="80.0" prefWidth="178.0" stylesheets="@drawer.css" text="Profile">
+      <Button accessibleText="but1" mnemonicParsing="false" prefHeight="80.0" prefWidth="178.0" stylesheets="@drawer.css" text="Profile">
          <font>
             <Font name="SansSerif Bold" size="15.0" />
          </font>

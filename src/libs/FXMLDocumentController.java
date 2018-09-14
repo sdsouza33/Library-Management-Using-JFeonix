@@ -19,8 +19,10 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+
 
 
 
@@ -31,7 +33,7 @@ import javafx.scene.layout.VBox;
 public class FXMLDocumentController implements Initializable {
     
     @FXML
-    private AnchorPane anchorPane;
+    private AnchorPane anchorPane,anchor;
 
     @FXML
     private JFXDrawer drawer;
@@ -47,7 +49,45 @@ public class FXMLDocumentController implements Initializable {
         try {
             // TODO
             VBox box = FXMLLoader.load(getClass().getResource("drawer.fxml"));
+           // box.prefWidthProperty().bind(anchorPane.widthProperty());
             drawer.setSidePane(box);
+            
+            for(Node node : box.getChildren()){
+                    if(node.getAccessibleText()!=null){
+                            node.addEventHandler(MouseEvent.MOUSE_CLICKED,(e)->{
+                            switch(node.getAccessibleText()){
+                                case "but1":{  
+                                try {
+                                    AnchorPane a=FXMLLoader.load(getClass().getResource("profile.fxml"));
+                                    anchor.getChildren().setAll(a);
+                                    
+                                    
+                                } catch (IOException ex) {
+                                    Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+                                    
+                                    
+                                
+                            }
+                              
+        
+                            }
+                            
+                            
+                            
+                            
+                            
+                            });
+                    
+                    
+                    
+                    }
+        
+        
+        }
+            
+            
+            
             HamburgerBackArrowBasicTransition burgerTask2 = new HamburgerBackArrowBasicTransition(hamburger);
             burgerTask2.setRate(-1);
             hamburger.addEventHandler(MouseEvent.MOUSE_PRESSED, (e) -> {

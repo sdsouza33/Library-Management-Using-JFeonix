@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="pane1" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="drawer_user.profile.ProfileController">
+    <stylesheets>
+        <URL value="@profile.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="23.0" layoutY="87.0" prefHeight="61.0" prefWidth="72.0" text="Name :" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="14.0" prefHeight="61.0" prefWidth="149.0" text="PROFILE :" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="330.0" layoutY="87.0" prefHeight="61.0" prefWidth="40.0" text="PID:" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="200.0" prefHeight="61.0" prefWidth="149.0" text="BOOK DETAIL:" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="272.0" prefHeight="61.0" prefWidth="565.0" text="THEORY OF COMPUTATION" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="428.0" layoutY="325.0" prefHeight="61.0" prefWidth="149.0" text="6 DAYS LEFT" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="233.0" layoutY="325.0" prefHeight="61.0" prefWidth="149.0" text="25 SEP 2018" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="325.0" prefHeight="61.0" prefWidth="149.0" text="19 SEP 2018" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Text layoutX="102.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sunny Dsouza" wrappingWidth="206.701171875">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="382.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="162040" wrappingWidth="206.701171875">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
